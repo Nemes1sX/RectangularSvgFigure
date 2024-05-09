@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 interface WeatherForecast {
   date: string;
@@ -15,8 +15,20 @@ interface WeatherForecast {
 })
 export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
+  @ViewChild('svgContainer', { static: true }) svgContainer!: ElementRef<SVGElement>;
 
-  constructor(private http: HttpClient) {}
+  isResizing = false;
+  startX = 0;
+  startY = 0;
+  width = 100;
+  height = 50;
+  x = 0;
+  y = 0;
+
+  constructor(private http: HttpClient) {
+
+  }
+
 
   ngOnInit() {
     this.getForecasts();
@@ -31,6 +43,32 @@ export class AppComponent implements OnInit {
         console.error(error);
       }
     );
+  }
+
+  startResize(event: MouseEvent) {
+    this.isResizing = true;
+    const svgRect = this.svgContainer.nativeElement.getBoundingClientRect();
+    this.startX = event.clientX - svgRect.left;
+    this.startY = event.clientY - svgRect.top;
+  }
+
+  stopResize() {
+    this.isResizing = false;
+  }
+
+  @HostListener('document:mousemove', ['$event'])
+  resize(event: MouseEvent) {
+    if (!this.isResizing) return;
+
+    const svgRect = this.svgContainer.nativeElement.getBoundingClientRect();
+    const mouseX = event.clientX - svgRect.left;
+    const mouseY = event.clientY - svgRect.top;
+
+    this.width += mouseX - this.startX;
+    this.height += mouseY - this.startY;
+
+    this.startX = mouseX;
+    this.startY = mouseY;
   }
 
   title = 'rectangularsvgfigure.client';
