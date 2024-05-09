@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangularSvgFigure.Server", "RectangularSvgFigure.Server\RectangularSvgFigure.Server.csproj", "{D83A5F94-1487-4D12-B2BA-4E300F7207E5}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "rectangularsvgfigure.client", "rectangularsvgfigure.client\rectangularsvgfigure.client.esproj", "{DEDB2873-472C-4FFA-B53B-FB426D989AE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D83A5F94-1487-4D12-B2BA-4E300F7207E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83A5F94-1487-4D12-B2BA-4E300F7207E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83A5F94-1487-4D12-B2BA-4E300F7207E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83A5F94-1487-4D12-B2BA-4E300F7207E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB2873-472C-4FFA-B53B-FB426D989AE9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F2302EB-1120-47A5-9625-3AE0BA0AD665}
+	EndGlobalSection
+EndGlobal

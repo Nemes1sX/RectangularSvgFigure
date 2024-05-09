@@ -1,0 +1,6 @@
+@RectangularSvgFigure.Server_HostAddress = http://localhost:5119
+
+GET {{RectangularSvgFigure.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
